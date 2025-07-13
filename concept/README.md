@@ -177,3 +177,16 @@ CREATE TABLE tabungan (
     FOREIGN KEY (id_user) REFERENCES users(id_user) ON DELETE CASCADE
 );
 ```
+# Alur Sistem
+
+### Registrasi Anggota
+
+![Alur Pembuatan Akun](./img/registrasi.svg)
+
+### Log-in
+
+![Alur Input Produk](./img/login.svg)
+
+### Log-out
+
+![Alur Jual Beli](./img/logout.svg)
