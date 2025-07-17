@@ -4,6 +4,12 @@
 * Anggota - Pembeli
 * Anggota - Penjual
 
+# System Design
+
+### Admin
+
+![Alur Pembuatan Akun](./img/system-design-admin.svg)
+
 # Alur Kerja
 
 ### Pembuatan Akun
@@ -24,7 +30,7 @@
 
 | Aspek                                  | Simpanan Pokok                                   | Simpanan Wajib                                   | Simpanan Sukarela                                                                     |
 | -------------------------------------- | ------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------------------------------------------- |
-| **Bentuk aset**                  | Dana tunaiSimpanan Pokok                         | Dana tunai                                       | Dana tunai                                                                            |
+| **Bentuk aset**                  | Dana tunai Simpanan Pokok                        | Dana tunai                                       | Dana tunai                                                                            |
 | **Status kepemilikan**           | Menjadi modal sendiri koperasi atas nama anggota | Menjadi modal sendiri koperasi atas nama anggota | Dana titipan anggota, tetapi tercatat sebagai kewajiban koperasi karena dapat ditarik |
 | **Tujuan utama**                 | Syarat keanggotaan (komitmen)                    | Partisipasi rutin menambah modal                 | Tabungan fleksibel & cadangan likuid anggota                                          |
 | **Frekuensi setor**              | Satu kali saat bergabung                         | Berkala (biasanya bulanan)                       | Bebas kapan saja                                                                      |
@@ -81,6 +87,7 @@
 | harga_titip   | DECIMAL(12,2) | Harga yang diberikan ke penjual |
 | harga_jual    | DECIMAL(12,2) | Harga jual koperasi ke pembeli  |
 | stok          | INT           | Jumlah barang tersedia          |
+| foto          | VARCHAR(50)   | Nama file yang di simpan        |
 | tanggal_masuk | DATE          | Tanggal barang masuk koperasi   |
 
 ---
@@ -177,6 +184,7 @@ CREATE TABLE tabungan (
     FOREIGN KEY (id_user) REFERENCES users(id_user) ON DELETE CASCADE
 );
 ```
+
 # Alur Sistem
 
 ### Registrasi Anggota
